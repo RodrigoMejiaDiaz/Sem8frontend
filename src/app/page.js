@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const [temperaturas, setTemperaturas] = useState([]);
 
-  const apiUrl = "http://localhost:8080/weatherforecast";
+  const apiUrl =
+    "http://ip172-18-0-16-ckqpa26fml8g009ugtug-8080.direct.labs.play-with-docker.com/weatherforecast";
 
   useEffect(() => {
     fetch(apiUrl)
@@ -14,7 +15,7 @@ export default function Home() {
         setTemperaturas(data);
       })
       .catch((error) => {
-        console.log("Error al obtener dato:", error);
+        console.log("Error al obtener datos:", error);
       });
   }, []);
 
