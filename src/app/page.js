@@ -14,7 +14,7 @@ export default function Home() {
         setTemperaturas(data);
       })
       .catch((error) => {
-        console.log("Error al obtener datos:", error);
+        console.log("Error al obtener dato:", error);
       });
   }, []);
 
